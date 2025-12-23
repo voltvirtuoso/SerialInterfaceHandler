@@ -1,0 +1,86 @@
+#######################################
+# Syntax Coloring Map For ESP_SIH
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ESP_SIH	KEYWORD1
+WiFiManager	KEYWORD1
+EEPROMStorage	KEYWORD1
+CommandHandler	KEYWORD1
+HelpSystem	KEYWORD1
+MenuSystem	KEYWORD1
+WiFiScanResult	KEYWORD1
+NetworkCredential	KEYWORD1
+ConnectionStatus	KEYWORD1
+MenuItem	KEYWORD1
+CommandInfo	KEYWORD1
+EEPROMHeader	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+process	KEYWORD2
+registerCommand	KEYWORD2
+setTimeout	KEYWORD2
+autoReconnectWiFi	KEYWORD2
+isConnected	KEYWORD2
+getConnectedSSID	KEYWORD2
+scanNetworks	KEYWORD2
+connect	KEYWORD2
+autoConnect	KEYWORD2
+verifyConnection	KEYWORD2
+clearAllCredentials	KEYWORD2
+listStoredCredentials	KEYWORD2
+removeCredential	KEYWORD2
+getStatus	KEYWORD2
+isStorageInitialized	KEYWORD2
+saveNetwork	KEYWORD2
+getNetwork	KEYWORD2
+removeNetwork	KEYWORD2
+clearAllNetworks	KEYWORD2
+getAllNetworks	KEYWORD2
+getNetworkCount	KEYWORD2
+incrementConnectionAttempts	KEYWORD2
+markConnectionSuccessful	KEYWORD2
+executeCommand	KEYWORD2
+getCommandHelp	KEYWORD2
+getCategories	KEYWORD2
+getAvailableCommands	KEYWORD2
+showHelp	KEYWORD2
+showQuickHelp	KEYWORD2
+showCategoryHelp	KEYWORD2
+getHelpCategories	KEYWORD2
+showMenu	KEYWORD2
+handleMenuInput	KEYWORD2
+exitMenu	KEYWORD2
+scanNetworks	KEYWORD2
+connectToNetwork	KEYWORD2
+checkConnection	KEYWORD2
+showSystemStatus	KEYWORD2
+listStoredCredentials	KEYWORD2
+removeStoredCredential	KEYWORD2
+clearAllCredentials	KEYWORD2
+getUserInput	KEYWORD2
+getNumericInput	KEYWORD2
+clearScreen	KEYWORD2
+showHeader	KEYWORD2
+showFooter	KEYWORD2
+getMenuTitle	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+EEPROM_SIZE	LITERAL1
+MAX_NETWORKS	LITERAL1
+SSID_MAX_LENGTH	LITERAL1
+PASSWORD_MAX_LENGTH	LITERAL1
+EEPROM_MAGIC	LITERAL1
+HEADER_ADDR	LITERAL1
+NETWORKS_ADDR	LITERAL1
+RECONNECT_DELAY	LITERAL1
