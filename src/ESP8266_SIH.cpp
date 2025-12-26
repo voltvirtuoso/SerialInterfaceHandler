@@ -13,6 +13,8 @@
  * 
  * @copyright MIT License
  */
+#if defined(ESP8266)
+
 #include "ESP8266_SIH.h"
 
 // WiFiScanResult implementation
@@ -542,56 +544,6 @@ WiFiManager::ConnectionStatus WiFiManager::getStatus() const {
 
 bool WiFiManager::isStorageInitialized() {
     return _storage.begin();
-}
-
-// v2
-bool WiFiManager::enableWiFi() {
-    if (WiFi.status() == WL_CONNECTED) {
-        return true;
-    }
-    setupWiFi();
-    _connected = false;
-    _connectedSSID = "";
-    Serial.println("✓ WiFi enabled");
-    return true;
-}
-
-bool WiFiManager::disableWiFi() {
-    if (WiFi.status() != WL_CONNECTED) {
-        WiFi.mode(WIFI_OFF);
-        _connected = false;
-        _connectedSSID = "";
-        Serial.println("✓ WiFi disabled");
-        return true;
-    }
-    return disconnect();
-}
-
-bool WiFiManager::disconnect() {
-    if (!_connected) return true;
-    
-    WiFi.disconnect();
-    delay(100);
-    _connected = false;
-    _wasConnected = true; // Remember we were connected for auto-reconnect
-    _lastDisconnectTime = millis();
-    _connectedSSID = "";
-    Serial.println("✓ Disconnected from WiFi");
-    return true;
-}
-
-void WiFiManager::setAutoReconnect(bool enabled) {
-    _autoReconnectEnabled = enabled;
-    Serial.printf("✓ Auto-reconnect %s\n", enabled ? "enabled" : "disabled");
-}
-
-void WiFiManager::setReconnectTimeout(unsigned long timeoutMs) {
-    _reconnectTimeout = timeoutMs;
-    Serial.printf("✓ Reconnect timeout set to %lu ms\n", timeoutMs);
-}
-
-bool WiFiManager::isAutoReconnectEnabled() const {
-    return _autoReconnectEnabled;
 }
 
 // MenuSystem Implementation
@@ -1298,3 +1250,5 @@ String ESP8266_SIH::getConnectedSSID() const {
     auto status = _wifiManager.getStatus();
     return status.ssid;
 }
+
+#endif // ESP8266_SIH_H

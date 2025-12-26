@@ -1,0 +1,29 @@
+{
+  "name": "Serial Interface Handler",
+  "version": "1.0.0",
+  "description": "Unified serial interface handler for ESP8266 and ESP32",
+  "keywords": "wifi, serial, interface, handler, esp8266, esp32",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/SIH_Library.git"
+  },
+  "authors": [
+    {
+      "name": "SIH Development Team",
+      "email": "your.email@example.com",
+      "url": "https://github.com/yourusername"
+    }
+  ],
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": ["espressif8266", "espressif32"],
+  "headers": "SIH.h",
+  "dependencies": {
+    "espressif8266": {
+      "version": ">=2.7.0"
+    },
+    "espressif32": {
+      "version": ">=1.0.0"
+    }
+  }
+}

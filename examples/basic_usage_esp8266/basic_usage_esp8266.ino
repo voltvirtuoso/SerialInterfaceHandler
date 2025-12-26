@@ -22,7 +22,7 @@
  */
 #include <ESP8266_SIH.h>
 
-ESP8266_SIH serialSystem;
+ESP8266_SIH serialSystem(&Serial);
 
 void setup() {
     Serial.begin(115200);
